@@ -1,9 +1,9 @@
 // ignore_for_file: use_key_in_widget_constructors, prefer_const_constructors, non_constant_identifier_names
 
 import 'package:flutter/material.dart';
+import 'package:paa_projek/widget_boxfood.dart';
 //import 'package:paa_projek/weather_servise.dart';
 import 'widget_searchbar.dart';
-
 import 'dart:math' as math;
 
 void main() => runApp(MyApp());
@@ -147,8 +147,6 @@ class _MyHomePageState extends State<MyHomePage> {
                 style: TextStyle(fontSize: 24, color: Color(0xFF3F3F3F)),
               ),
 
-              
-
               // ElevatedButton to generate a new recommendation
               SizedBox(height: 20),
               ElevatedButton(
@@ -164,6 +162,30 @@ class _MyHomePageState extends State<MyHomePage> {
                 },
                 child: Text('Get Another Recommendation'),
               ),
+
+              SizedBox(height: 20),
+
+              //================================================================================ingin dibuat widget
+              WidgetBoxfood(
+                hintText: 'food',
+                onChanged: (value) {
+                  setState(() {
+                    searchTerm = value;
+                  });
+                },
+              ),
+              //================================================================================ingin dibuat widgets
+
+              WidgetBoxfood(
+                hintText: 'food',
+                onChanged: (value) {
+                  setState(() {
+                    searchTerm = value;
+                  });
+                },
+              ),
+
+              // Display FoodBox widgets
             ],
           ),
         ),
